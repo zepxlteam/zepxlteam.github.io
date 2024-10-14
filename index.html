@@ -7,7 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            background-image: url('https://www.w3schools.com/w3images/mountains.jpg'); /* Mooie achtergrondafbeelding */
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,7 +21,7 @@
         }
         .container {
             text-align: center;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparante achtergrond voor leesbaarheid */
             padding: 50px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -32,8 +34,9 @@
             font-size: 1.1em;
             color: #666;
         }
+        /* Fallout-stijl buttons */
         .btn {
-            display: inline-block;
+            display: block;
             padding: 10px 20px;
             background-color: #007bff;
             color: white;
@@ -41,17 +44,20 @@
             border-radius: 5px;
             margin-top: 20px;
             font-size: 1.1em;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         .btn:hover {
             background-color: #0056b3;
+            border-color: #fff;
+            transform: scale(1.05);
         }
         /* Eend stijl */
         .duck {
             position: absolute;
             width: 100px;
             height: 100px;
-            background-image: url('https://example.com/duck.png'); /* Zorg ervoor dat je een eend-afbeelding hebt */
+            background-image: url('https://th.bing.com/th/id/OIP.I1mTknPVbSNzOx6MAjpyKAHaFP?w=271&h=192&c=7&r=0&o=5&pid=1.7'); /* Zorg ervoor dat je een eend-afbeelding hebt */
             background-size: contain;
             background-repeat: no-repeat;
             top: 50px;
@@ -64,14 +70,19 @@
 <body>
     <div class="container">
         <h1>Welkom bij ZEPXL Begeleiders</h1>
-        <p>Ontdek onze toegewijde begeleiders en hun persoonlijke verhalen. Klik hieronder om naar de persoonlijke pagina's van onze begeleiders te gaan.</p>
-        <a href="begeleiders.html" class="btn">Bekijk Begeleiders</a>
+        <p>Ontdek onze toegewijde begeleiders en hun persoonlijke verhalen. Klik op een begeleider om naar hun persoonlijke pagina te gaan.</p>
+
+        <!-- Buttons naar begeleiderspagina's -->
+        <a href="julya.html" class="btn">Julya</a>
+        <a href="begeleider-marie.html" class="btn">Marie de Boer</a>
+        <a href="begeleider-sander.html" class="btn">Sander Janssen</a>
     </div>
 
     <!-- Wandelende eend -->
     <div class="duck" id="duck"></div>
 
     <script>
+        // Willekeurige positie voor de eend
         function randomPosition() {
             const duck = document.getElementById('duck');
             const x = Math.random() * (window.innerWidth - 100);
