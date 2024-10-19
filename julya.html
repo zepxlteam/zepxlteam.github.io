@@ -76,7 +76,7 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
-        .hobbies div {
+        .hobby {
             background-color: #3f51b5;
             color: white;
             padding: 15px 25px;
@@ -85,10 +85,23 @@
             text-align: center;
             margin: 10px 0;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
         }
-        .hobbies div:hover {
+        .hobby:hover {
             background-color: #ff4081;
             transform: scale(1.05);
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .hobby.active .content {
+            display: block;
         }
         @media(max-width: 768px) {
             .header h1 {
@@ -101,7 +114,7 @@
             .bio {
                 font-size: 1rem;
             }
-            .hobbies div {
+            .hobby {
                 width: 45%;
             }
         }
@@ -116,7 +129,7 @@
             .bio {
                 font-size: 0.9rem;
             }
-            .hobbies div {
+            .hobby {
                 width: 100%;
             }
         }
@@ -142,15 +155,38 @@
         </div>
 
         <div class="hobbies">
-            <div>🎨 Art & Design</div>
-            <div>✈️ Traveling</div>
-            <div>🎮 Gaming</div>
+            <div class="hobby">
+                🎨 Art & Design
+                <div class="content">
+                    <p>I enjoy creating digital illustrations and experimenting with graphic design tools.</p>
+                </div>
+            </div>
+            <div class="hobby">
+                ✈️ Traveling
+                <div class="content">
+                    <p>Exploring new cultures and visiting unique destinations fuels my creativity.</p>
+                </div>
+            </div>
+            <div class="hobby">
+                🎮 Gaming
+                <div class="content">
+                    <p>In my downtime, I like playing strategy and open-world games for fun and relaxation.</p>
+                </div>
+            </div>
         </div>
 
         <footer>
             &copy; 2024 Julya P. All rights reserved.
         </footer>
     </div>
+
+    <script>
+        document.querySelectorAll('.hobby').forEach(hobby => {
+            hobby.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
