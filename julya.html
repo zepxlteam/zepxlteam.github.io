@@ -149,6 +149,22 @@
             font-size: 0.9rem;
             color: #555;
         }
+        .home-button {
+            position: absolute; /* Maak de knop absoluut ten opzichte van de body */
+            top: 20px; /* Plaats de knop 20px van de bovenkant */
+            right: 20px; /* Plaats de knop 20px van de rechterkant */
+            padding: 10px 20px; /* Voeg wat padding toe aan de knop */
+            background-color: #3f51b5; /* Hoofdkleur voor de knop */
+            color: white; /* Tekstkleur voor de knop */
+            border: none; /* Geen rand */
+            border-radius: 5px; /* Ronde hoeken */
+            cursor: pointer; /* Verander de cursor naar pointer */
+            font-size: 1rem; /* Lettergrootte van de knop */
+            transition: background-color 0.3s; /* Transitie-effect voor achtergrondkleur */
+        }
+        .home-button:hover {
+            background-color: #ff4081; /* Lichtere kleur bij hover */
+        }
     </style>
 </head>
 <body>
@@ -158,6 +174,7 @@
     <div class="image-container">
         <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-olly-733872.jpg&fm=jpg" alt="profielfoto">
     </div>
+<a href="index.html" class="home-button">Home</a>
             <p>Student Social Work aan Avans</p>
         </div>
         <div class="bio">
