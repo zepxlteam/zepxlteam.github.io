@@ -31,7 +31,8 @@
             border-radius: 15px;
             transform: translateY(50px);
             transition: transform 0.3s ease, background-color 0.3s ease;
-            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            background-image: url('https://www.google.nl/imgres?q=background%20hockey&imgurl=https%3A%2F%2Fi.pinimg.com%2F474x%2F8e%2F50%2F9b%2F8e509b895b7ee842a71f8f1f34103ea5.jpg&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2Ffield-hockey-wallpaper-in-2023--587790188888651938%2F&docid=qIidMynMn8GCtM&tbnid=7B8vwyc834o6aM&vet=12ahUKEwigq8u8-pqJAxW3hf0HHcluCJc4ChAzegQIIBAA..i&w=474&h=355&hcb=2&ved=2ahUKEwigq8u8-pqJAxW3hf0HHcluCJc4ChAzegQIIBAA'); /* Voeg hier de URL van de achtergrondafbeelding toe */
+            background-size: cover; /* Zorg ervoor dat de afbeelding de container bedekt */
         }
         .container:hover {
             transform: translateY(0);
@@ -76,23 +77,23 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
-.hobby {
-    background-color: rgb(133, 1, 119); /* Paars */
-    color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
-    width: 30%;
-    text-align: center;
-    margin: 10px 0;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(128, 0, 128, 0.6);
-}
-.hobby:hover {
-    background-color: rgb(133, 1, 119); /* Lichtere paars tint */
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgb(255, 105, 180), 0 0 30px rgb(75, 0, 130), 0 0 40px rgb(148, 0, 211); /* RGB-kleuren in schaduw */
-							}
+        .hobby {
+            background-color: rgb(133, 1, 119); /* Paars */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            margin: 10px 0;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(128, 0, 128, 0.6);
+        }
+        .hobby:hover {
+            background-color: rgb(133, 1, 119); /* Lichtere paars tint */
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgb(255, 105, 180), 0 0 30px rgb(75, 0, 130), 0 0 40px rgb(148, 0, 211); /* RGB-kleuren in schaduw */
+        }
         .content {
             display: none;
             margin-top: 10px;
@@ -147,7 +148,7 @@
 
     <div class="container">
         <div class="header">
-            <img src="profile-pic.jpg" alt="Julya P. Photo">
+            <img src="https://www.google.nl/imgres?q=woman%20stock%20photo&imgurl=https%3A%2F%2Ft3.ftcdn.net%2Fjpg%2F02%2F22%2F10%2F62%2F360_F_222106228_NP5f0gXi3JOCgmaTsEyg7RuyKgwDLGuY.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fnl%2Fsearch%3Fk%3Dwoman&docid=81HL4-aBW4WEtM&tbnid=1VnzLkcAJvVGgM&vet=12ahUKEwjvo7Oj-pqJAxWLg_0HHYpANcQQM3oECE8QAA..i&w=540&h=360&hcb=2&itg=1&ved=2ahUKEwjvo7Oj-pqJAxWLg_0HHYpANcQQM3oECE8QAA" alt="Julya P. Photo"> <!-- Voeg hier de URL van de profielfoto toe -->
             <h1>Julya P.</h1>
             <p>Creative Enthusiast, Developer, and Traveler</p>
         </div>
@@ -169,12 +170,12 @@
                     <p>Exploring new cultures and visiting unique destinations fuels my creativity.</p>
                 </div>
             </div>
-														<div class="hobby">
-    															🏒 Hockey
-    												<div class="content">
-        										<p>In mijn vrije tijd speel ik graag hockey, het houdt me fit en ik geniet van de competitie.</p>
-    										</div>
-											</div>
+            <div class="hobby">
+                🏒 Hockey
+                <div class="content">
+                    <p>In mijn vrije tijd speel ik graag hockey, het houdt me fit en ik geniet van de competitie.</p>
+                </div>
+            </div>
         </div>
 
         <footer>
