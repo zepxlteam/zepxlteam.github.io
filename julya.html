@@ -182,11 +182,28 @@
                 <div class="content">
                     <p>Ik werk binnen ZepXL. Hier bied ik begeleiding binnen een woonlocatie aan mensen boven de achtien met verschillende problematieken. </p>
                 </div>
-            </div>        
+            </div>
+    <div class="duck" id="duck"></div>        
 									</div>
         <footer>
             <p>&Copyright 2024. Beschermd wegens de wet privacy & gegevens. Julya. P</p>
         </footer>
     </div>
 </body>
+    <script>
+        // Willekeurige positie voor de eend
+        function randomPosition() {
+            const duck = document.getElementById('duck');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            duck.style.left = x + 'px';
+            duck.style.top = y + 'px';
+        }
+
+        // Verplaats de eend om de 2 seconden naar een willekeurige positie
+        setInterval(randomPosition, 2000);
+    </script>
 </html>
+
+
+
