@@ -76,21 +76,23 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
-        .hobby {
-            background-color: #3f51b5;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            width: 30%;
-            text-align: center;
-            margin: 10px 0;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
-        }
-        .hobby:hover {
-            background-color: #ff4081;
-            transform: scale(1.05);
-        }
+.hobby {
+    background-color: rgb(128, 0, 128); /* Paars */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.6);
+}
+.hobby:hover {
+    background-color: rgb(186, 85, 211); /* Lichtere paars tint */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(255, 105, 180), 0 0 30px rgb(75, 0, 130), 0 0 40px rgb(148, 0, 211); /* RGB-kleuren in schaduw */
+							}
         .content {
             display: none;
             margin-top: 10px;
