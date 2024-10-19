@@ -128,6 +128,18 @@
                 width: 45%;
             }
         }
+        canvas {
+            background-color: #ffffff;
+            display: block;
+            margin: 0 auto; /* Centreer het canvas */
+            border: 1px solid #000;
+        }
+        #game-over {
+            display: none;
+            text-align: center;
+            font-size: 2rem;
+            color: #ff4081;
+        }
         @media(max-width: 480px) {
             .header h1 {
                 font-size: 1.8rem;
@@ -200,6 +212,74 @@
                 </div>
             </div>
 									</div>
+    <canvas id="gameCanvas" width="600" height="200"></canvas>
+<h1 id="game-over">Game Over!</h1>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let dino = { x: 50, y: 150, width: 20, height: 20, jump: false, gravity: 1, jumpPower: 15, velocity: 0 };
+        let obstacles = [];
+        let score = 0;
+        let gameOver = false;
+
+        function startGame() {
+            document.addEventListener("keydown", jump);
+            setInterval(update, 20);
+            setInterval(createObstacle, 2000);
+        }
+
+        function jump(event) {
+            if (event.code === "Space" && !dino.jump) {
+                dino.jump = true;
+                dino.velocity = -dino.jumpPower;
+            }
+        }
+
+        function createObstacle() {
+            const obstacle = { x: canvas.width, y: 160, width: 20, height: 20 };
+            obstacles.push(obstacle);
+        }
+
+        function update() {
+            if (gameOver) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            dino.velocity += dino.gravity;
+            dino.y += dino.velocity;
+
+            if (dino.y >= 150) {
+                dino.y = 150;
+                dino.jump = false;
+            }
+
+            obstacles.forEach(obstacle => {
+                obstacle.x -= 5;
+                ctx.fillStyle = "#000";
+                ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+                if (collision(dino, obstacle)) {
+                    gameOver = true;
+                    document.getElementById("game-over").style.display = "block";
+                }
+            });
+
+            obstacles = obstacles.filter(obstacle => obstacle.x + obstacle.width > 0);
+            ctx.fillStyle = "#ff4081"; // Dinosaurus kleur
+            ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+            ctx.fillStyle = "#000";
+            ctx.fillText("Score: " + score++, 10, 20);
+        }
+
+        function collision(dino, obstacle) {
+            return !(dino.x > obstacle.x + obstacle.width ||
+                     dino.x + dino.width < obstacle.x ||
+                     dino.y > obstacle.y + obstacle.height ||
+                     dino.y + dino.height < obstacle.y);
+        }
+
+        startGame();
+    </script>
         <footer>
             <p>&Copyright 2024. Beschermd wegens de wet privacy & gegevens. Julya. P</p>
         </footer>
