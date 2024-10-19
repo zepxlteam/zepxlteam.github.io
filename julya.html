@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Julya P. - Personal Page</title>
+    <title>Profielpagina</title>
     <style>
         * {
             margin: 0;
@@ -145,63 +144,32 @@
     </style>
 </head>
 <body>
-
     <div class="container">
         <div class="header">
-            <img src="https://www.google.nl/imgres?q=woman%20stock%20photo&imgurl=https%3A%2F%2Ft3.ftcdn.net%2Fjpg%2F02%2F22%2F10%2F62%2F360_F_222106228_NP5f0gXi3JOCgmaTsEyg7RuyKgwDLGuY.jpg&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fnl%2Fsearch%3Fk%3Dwoman&docid=81HL4-aBW4WEtM&tbnid=1VnzLkcAJvVGgM&vet=12ahUKEwjvo7Oj-pqJAxWLg_0HHYpANcQQM3oECE8QAA..i&w=540&h=360&hcb=2&itg=1&ved=2ahUKEwjvo7Oj-pqJAxWLg_0HHYpANcQQM3oECE8QAA" alt="Julya P. Photo"> <!-- Voeg hier de URL van de profielfoto toe -->
-            <h1>Julya P.</h1>
-            <p>Creative Enthusiast, Developer, and Traveler</p>
+            <img src="https://via.placeholder.com/150" alt="Profielfoto">
+            <h1>Naam</h1>
+            <p>Student Social Work aan Avans</p>
         </div>
-
         <div class="bio">
-            <p>Hello! I'm Julya P., passionate about design, coding, and exploring new cultures. In my free time, I love to experiment with new technologies and work on creative projects.</p>
+            <p>Welkom op mijn profielpagina. Hier zijn enkele van mijn hobby's:</p>
         </div>
-
         <div class="hobbies">
-            <div class="hobby">
-                🎨 Art & Design
+            <div class="hobby" onclick="this.classList.toggle('active');">
+                📚 Social Work
                 <div class="content">
-                    <p>I enjoy creating digital illustrations and experimenting with graphic design tools.</p>
+                    <p>Ik ben momenteel bezig met mijn vierde jaar van de opleiding Social Work aan Avans in Breda. Deze studie helpt me om anderen te ondersteunen en te empoweren in onze samenleving.</p>
                 </div>
             </div>
-            <div class="hobby">
-                ✈️ Traveling
-                <div class="content">
-                    <p>Exploring new cultures and visiting unique destinations fuels my creativity.</p>
-                </div>
-            </div>
-            <div class="hobby">
-                🏒 Hockey
-                <div class="content">
-                    <p>In mijn vrije tijd speel ik graag hockey, het houdt me fit en ik geniet van de competitie.</p>
-                </div>
-            </div>
-<div class="hobby">
-    📚 Social Work
-    <div class="content">
-        <p>Momenteel volg ik de opleiding Social Work binnen Hogeschool Avans in Breda. Ik zit in mijn laatste jaar en wanneer ik klaar ben zou ik graag de zelfredzaamheid van de mensen willen ondersteunen, om ze zo terug de maatschappij in te begeleiden.</p>
-    </div>
-</div>
-            <div class="hobby">
+            <div class="hobby" onclick="this.classList.toggle('active');">
                 🏒 Hockey
                 <div class="content">
                     <p>In mijn vrije tijd speel ik graag hockey, het houdt me fit en ik geniet van de competitie.</p>
                 </div>
             </div>
         </div>
-
         <footer>
-            &copy; 2024 Julya P. All rights reserved.
+            <p>&copy; 2024 - Mijn Profiel</p>
         </footer>
     </div>
-
-    <script>
-        document.querySelectorAll('.hobby').forEach(hobby => {
-            hobby.addEventListener('click', function() {
-                this.classList.toggle('active');
-            });
-        });
-    </script>
-
 </body>
 </html>
